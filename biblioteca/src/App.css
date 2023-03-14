@@ -15,6 +15,7 @@ header {
 
 h1 {
   margin-left: 20px;
+  font-size: 45px;
 }
 
 ul {
@@ -25,6 +26,8 @@ ul {
 li {
   list-style: none;
   margin-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
 } 
 
 li:hover {
@@ -40,12 +43,60 @@ main {
 
 .livros {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1rem;
   justify-items: center;
 }
 
+.card-livro {
+  text-align: center;
+}
+
+.card-livro:hover img {
+  transform: scale(1.05);
+  filter: brightness(80%);
+  transition: 0.5s ease-in-out;
+}
+
+.card-livro:hover p {
+  color: rgb(194, 137, 216);
+  transition: 0.5s ease-in-out;
+}
+
+.card-livro:hover span {
+  color: rgb(194, 137, 216);
+  transition: 0.5s ease-in-out;
+}
+
 img {
-  margin-top: 20px;
-  width: 200px;
-  height: 300px;
+  margin-top: 1.25rem;
+  width: 13rem;
+  height: 16rem;
+}
+
+
+footer {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(194, 137, 216);
+}
+
+h2:hover {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  transition: 1000ms;
+}
+
+p {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .livros {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }

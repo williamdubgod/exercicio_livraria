@@ -1,13 +1,14 @@
 import './App.css';
-import Nav from './componentes/Nav';
 import Home from './componentes/Home';
-
+import Livros from './componentes/Livros';
+import Footer from './componentes/Footer';
 
 function App() {
   return (
     <>
-    <Nav />
     <Home /> 
+    <Livros />
+    <Footer />
     </>
   );
 }
